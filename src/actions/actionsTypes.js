@@ -1,0 +1,8 @@
+export const SERVICE_ADD_VALUE = "SERVICE_ADD_VALUE";
+export const SERVICE_SUBMIT = "SERVICE_SUBMIT";
+export const VALUE_ITEM_EDIT = "VALUE_ITEM_EDIT";
+export const SAVE_ITEM_EDIT = "SAVE_ITEM_EDIT";
+export const ON_EDIT_MODE = "ON_EDIT_MODE";
+export const REMOVE_ITEM = "REMOVE_ITEM";
+export const EXIT_EDIT_MODE = "EXIT_EDIT_MODE";
+export const EXIT_ERROR_MODAL = "EXIT_ERROR_MODAL";
