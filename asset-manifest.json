@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/new_storm/static/css/main.c4da57a4.css",
+    "main.js": "/new_storm/static/js/main.1e635bcb.js",
+    "index.html": "/new_storm/index.html",
+    "main.c4da57a4.css.map": "/new_storm/static/css/main.c4da57a4.css.map",
+    "main.1e635bcb.js.map": "/new_storm/static/js/main.1e635bcb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4da57a4.css",
+    "static/js/main.1e635bcb.js"
+  ]
+}
