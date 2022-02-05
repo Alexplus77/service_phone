@@ -1,6 +1,7 @@
 import "App.css";
 import { Form_Input } from "components/form_input";
 import { ServiceList } from "components/service_list";
+import {Filter_Item} from "components/filter_item";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { exitEditMode } from "actions/createActions";
@@ -27,6 +28,7 @@ function App() {
     <>
       {errors && <ErrorsModal />}
       <div className="container">
+        <Filter_Item/>
         <Form_Input />
         <ServiceList />
       </div>

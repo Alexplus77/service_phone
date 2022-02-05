@@ -1,14 +1,21 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { ServiceItem } from "components/serviceItem";
 import { useSelector } from "react-redux";
 const ServiceList = () => {
-  const { services } = useSelector((state) => state.serviceListReducer);
+  const { services, searchItem } = useSelector((state) => state.serviceListReducer);
+  const [items, setItems]=useState(null)
+
+useEffect(()=>{
+    setItems(() =>  searchItem.length ? searchItem : services)
+}, [services, searchItem])
+
 
   return (
     <ul className="container-items">
       <h1>Список услуг</h1>
-      {services.length ? (
-        services?.map(({ name, price, id, isEdit }) => (
+      {
+          services.length ? (
+        items?.map(({ name, price, id, isEdit }) => (
           <ServiceItem
             key={id}
             name={name}

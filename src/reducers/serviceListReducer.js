@@ -5,6 +5,7 @@ import {
   REMOVE_ITEM,
   EXIT_EDIT_MODE,
   EXIT_ERROR_MODAL,
+    HANDLE_FILTER_ITEM
 } from "actions/actionsTypes";
 import { nanoid } from "nanoid";
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
   isEditService: false,
   editItem: "",
   errors: null,
+  searchItem:[]
 };
 const error = "Такое наименование услуги уже есть, выберите другое!!!";
 
@@ -37,6 +39,7 @@ const serviceListReducer = (state = initialState, action) => {
               isEdit: false,
             },
           ],
+          searchItem: []
         };
       }
 
@@ -64,6 +67,7 @@ const serviceListReducer = (state = initialState, action) => {
           ...state,
           services: changedItem,
           isEditService: false,
+          searchItem: []
         };
       }
 
@@ -90,6 +94,7 @@ const serviceListReducer = (state = initialState, action) => {
         services: serviceItems,
         isEditService: false,
         editItem: "",
+        searchItem: []
       };
 
     case REMOVE_ITEM:
@@ -97,10 +102,20 @@ const serviceListReducer = (state = initialState, action) => {
       return {
         ...state,
         services: [...state.services.filter(({ id }) => id !== idRemovingItem)],
+        searchItem: []
       };
 
     case EXIT_ERROR_MODAL:
       return { ...state, errors: null };
+
+    case HANDLE_FILTER_ITEM:
+      const value=action.payload
+
+        const filteredItem=state.services.filter(({name})=>
+               [...name].slice(0, value.length).every((elem, i)=>elem===value[i])
+        )
+
+      return {...state, searchItem: filteredItem}
     default:
       return state;
   }

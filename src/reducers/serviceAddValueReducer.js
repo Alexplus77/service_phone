@@ -1,12 +1,13 @@
 import {
   SERVICE_ADD_VALUE,
   ON_EDIT_MODE,
-  SERVICE_SUBMIT,
+
 } from "actions/actionsTypes";
 
 const initialState = {
   name: "",
   price: "",
+  search:''
 };
 const serviceAddValueReducer = (state = initialState, action) => {
   switch (action.type) {
