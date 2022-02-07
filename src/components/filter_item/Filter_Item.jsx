@@ -25,7 +25,7 @@ const Filter_Item = () => {
     }, [])
 
     return (
-        <div>
+        <div className='search-container'>
             <input  placeholder='Фильтр услуг, начните вводить название услуги' value={search} onChange={onChange}
                    type={"search"} className="form-control" name='search' ref={inputSearch}/>
             <i className="fa fa-search" aria-hidden="true"/>

@@ -97,3 +97,13 @@ button{
 .btn-primary{
   width: 80px;
 }
+.search-container{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  width: 600px;
+}
+.fa-search{
+  align-self: center;
+  font-size: 20px;
+}
