@@ -6,7 +6,7 @@ const Filter_Item = () => {
     const dispatch = useDispatch()
     const inputSearch = useRef()
     const {search} = useSelector((state) => state.serviceAddValueReducer);
-
+    const { isEditService } = useSelector((state) => state.serviceListReducer);
     const onChange = ({target}) => {
         dispatch(serviceAdd(target.name, target.value))
     }
@@ -27,7 +27,7 @@ const Filter_Item = () => {
     return (
         <div className='search-container'>
             <input  placeholder='Фильтр услуг, начните вводить название услуги' value={search} onChange={onChange}
-                   type={"search"} className="form-control" name='search' ref={inputSearch}/>
+                   type={"search"} className="form-control" name='search' ref={inputSearch} disabled={isEditService}/>
             <i className="fa fa-search" aria-hidden="true"/>
         </div>
     )
