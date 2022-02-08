@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/service_phone/static/css/main.5cc3e73c.css",
-    "main.js": "/service_phone/static/js/main.6c07d396.js",
+    "main.js": "/service_phone/static/js/main.17f90294.js",
     "index.html": "/service_phone/index.html",
     "main.5cc3e73c.css.map": "/service_phone/static/css/main.5cc3e73c.css.map",
-    "main.6c07d396.js.map": "/service_phone/static/js/main.6c07d396.js.map"
+    "main.17f90294.js.map": "/service_phone/static/js/main.17f90294.js.map"
   },
   "entrypoints": [
     "static/css/main.5cc3e73c.css",
-    "static/js/main.6c07d396.js"
+    "static/js/main.17f90294.js"
   ]
 }
