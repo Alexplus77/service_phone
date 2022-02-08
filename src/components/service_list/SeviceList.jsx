@@ -3,10 +3,11 @@ import { ServiceItem } from "components/serviceItem";
 import { useSelector } from "react-redux";
 const ServiceList = () => {
   const { services, searchItem } = useSelector((state) => state.serviceListReducer);
+    const {search} = useSelector((state) => state.serviceAddValueReducer);
   const [items, setItems]=useState(null)
 
 useEffect(()=>{
-    setItems(() =>  searchItem.length ? searchItem : services)
+    setItems(() =>  search.length ? searchItem : services)
 }, [services, searchItem])
 
 
