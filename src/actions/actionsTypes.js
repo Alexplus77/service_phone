@@ -6,5 +6,5 @@ export const ON_EDIT_MODE = "ON_EDIT_MODE";
 export const REMOVE_ITEM = "REMOVE_ITEM";
 export const EXIT_EDIT_MODE = "EXIT_EDIT_MODE";
 export const EXIT_ERROR_MODAL = "EXIT_ERROR_MODAL";
-export const HANDLE_FILTER_ITEM='HANDLE_FILTER_ITEM';
+
 

@@ -7,7 +7,7 @@ import {
   EXIT_EDIT_MODE,
   ON_EDIT_MODE,
   EXIT_ERROR_MODAL,
-    HANDLE_FILTER_ITEM
+
 } from "./actionsTypes";
 
 export const serviceAdd = (name, value) => ({
@@ -42,7 +42,3 @@ export const exitEditMode = (id) => ({
 export const exitErrorModal = () => ({
   type: EXIT_ERROR_MODAL,
 });
-export const handleFilterItem = (value) => ({
-  type:HANDLE_FILTER_ITEM,
-  payload:value
-})

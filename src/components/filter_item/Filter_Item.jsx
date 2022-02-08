@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import {useDispatch, useSelector} from "react-redux";
-import {serviceAdd, handleFilterItem} from "actions/createActions";
+import {serviceAdd} from "actions/createActions";
 
 const Filter_Item = () => {
     const dispatch = useDispatch()
@@ -8,12 +8,9 @@ const Filter_Item = () => {
     const {search} = useSelector((state) => state.serviceAddValueReducer);
     const { isEditService } = useSelector((state) => state.serviceListReducer);
     const onChange = ({target}) => {
-        dispatch(serviceAdd(target.name, target.value))
-    }
+        dispatch(serviceAdd(target.name, target.value))    }
 
-    useEffect(() => {
-        dispatch(handleFilterItem(search))
-    }, [search])
+
     const inputBlur = () => {
         inputSearch.current.value = ''
     }
